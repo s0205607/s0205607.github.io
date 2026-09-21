@@ -3,86 +3,192 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Задание 1 - Гиперссылки и формы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2 - Разработка веб-интерфейса</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Список гиперссылок</h1>
-    <ul>
-        <li>1. <a href="http://kubsu.ru/">Главная страница сайта kubsu.ru (абсолютная)</a></li>
-        <li>2. <a href="https://kubsu.ru/">Главная страница сайта kubsu.ru в протоколе https</a></li>
-        <li>3. <a href="https://kubsu.ru/"><img src="image.jpg" alt="Ссылка-изображение" width="100"></a></li>
-        <li>4. <a href="/internal">Сокращенная ссылка на внутреннюю страницу</a></li>
-        <li>5. <a href="/">Сокращенная ссылка на главную страницу</a></li>
-        <li>6. <a href="#form-section">Ссылка на фрагмент текущей страницы (ведет на форму ниже)</a></li>
-        <li>7. <a href="https://example.com/?param1=1&param2=2&param3=3">Ссылка с тремя параметрами в URL</a></li>
-        <li>8. <a href="https://example.com/?id=42">Ссылка с параметром id в URL</a></li>
-        <li>9. <a href="./page.html">Относительная на страницу в текущем каталоге</a></li>
-        <li>10. <a href="./about/page.html">Относительная на страницу в каталоге about</a></li>
-        <li>11. <a href="../page.html">Относительная на страницу в каталоге уровнем выше</a></li>
-        <li>12. <a href="../../page.html">Относительная на страницу двумя уровнями выше</a></li>
-        <li>13. <p>Обычный абзац текста, внутри которого встроена <a href="https://example.com/">контекстная
-                    гиперссылка</a>.</p>
-        </li>
-        <li>14. <a href="https://example.com/#section-name">Ссылка на фрагмент страницы стороннего сайта</a></li>
-        <li>15. Ссылки из прямоугольных и круглых областей картинки:
-            <br>
-            <img src="image.jpg" alt="Карта" usemap="#imagemap" width="200">
-            <map name="imagemap">
-                <area shape="rect" coords="0,0,100,100" href="https://example.com/rect" alt="Прямоугольная область">
-                <area shape="circle" coords="150,150,50" href="https://example.com/circle" alt="Круглая область">
-            </map>
-        </li>
-        <li>16. <a href="">Ссылка с пустым href</a></li>
-        <li>17. <a>Ссылка без href</a></li>
-        <li>18. <a href="https://example.com/" rel="nofollow">Запрещен переход поисковикам</a></li>
-        <li>19. <!--noindex--><a href="https://example.com/">Запрещенная для индексации поисковиками</a><!--/noindex-->
-        </li>
-        <li>20. Нумерованный список ссылок с подписями title:
-            <ol>
-                <li><a href="https://example.com/1" title="Первая ссылка">Ссылка один</a></li>
-                <li><a href="https://example.com/2" title="Вторая ссылка">Ссылка два</a></li>
-            </ol>
-        </li>
-        <li>21. <a href="ftp://example.com/file.zip">Ссылка на файл на сервере FTP с авторизацией</a></li>
-    </ul>
 
-    <h1 id="form-section">Форма регистрации</h1>
-    <form action="/" method="POST">
-        <label>1. ФИО: <input type="text" name="fio"></label><br><br>
 
-        <label>2. Телефон: <input type="tel" name="phone"></label><br><br>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="header-brand">
+                <img src="image.jpg" alt="Логотип сайта" class="logo">
+                <span class="site-title">Название сайта</span>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="#links-section">Ссылка меню 1</a></li>
+                    <li><a href="#table-section">Ссылка 2</a></li>
+                    <li><a href="#form-section">Ссылка 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <label>3. E-mail: <input type="email" name="email"></label><br><br>
 
-        <label>4. Дата рождения: <input type="date" name="birthdate"></label><br><br>
+    <main class="container main-content">
 
-        <p>5. Пол:</p>
-        <label><input type="radio" name="gender" value="male"> Мужской</label>
-        <label><input type="radio" name="gender" value="female"> Женский</label><br><br>
 
-        <label>6. Любимый язык программирования (зажмите Ctrl для множественного выбора):<br>
-            <select name="languages[]" multiple="multiple">
-                <option value="Pascal">Pascal</option>
-                <option value="C">C</option>
-                <option value="C++">C++</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="PHP">PHP</option>
-                <option value="Python">Python</option>
-                <option value="Java">Java</option>
-                <option value="Haskel">Haskel</option>
-                <option value="Clojure">Clojure</option>
-                <option value="Prolog">Prolog</option>
-                <option value="Scala">Scala</option>
-            </select>
-        </label><br><br>
+        <section id="links-section" class="content-block">
+            <h1>Список гиперссылок</h1>
+            <ul>
+                <li>1. <a href="http://kubsu.ru/">Главная страница сайта kubsu.ru (абсолютная)</a></li>
+                <li>2. <a href="https://kubsu.ru/">Главная страница сайта kubsu.ru в протоколе https</a></li>
+                <li>3. <a href="https://kubsu.ru/"><img src="image.jpg" alt="Ссылка-изображение" width="100"></a></li>
+                <li>4. <a href="/internal">Сокращенная ссылка на внутреннюю страницу</a></li>
+                <li>5. <a href="/">Сокращенная ссылка на главную страницу</a></li>
+                <li>6. <a href="#form-section">Ссылка на фрагмент текущей страницы (ведет на форму ниже)</a></li>
+                <li>7. <a href="https://example.com/?param1=1&param2=2&param3=3">Ссылка с тремя параметрами в URL</a>
+                </li>
+                <li>8. <a href="https://example.com/?id=42">Ссылка с параметром id в URL</a></li>
+                <li>9. <a href="./page.html">Относительная на страницу в текущем каталоге</a></li>
+                <li>10. <a href="./about/page.html">Относительная на страницу в каталоге about</a></li>
+                <li>11. <a href="../page.html">Относительная на страницу в каталоге уровнем выше</a></li>
+                <li>12. <a href="../../page.html">Относительная на страницу двумя уровнями выше</a></li>
+                <li>13. <p>Обычный абзац текста, внутри которого встроена <a href="https://example.com/">контекстная
+                            гиперссылка</a>.</p>
+                </li>
+                <li>14. <a href="https://example.com/#section-name">Ссылка на фрагмент страницы стороннего сайта</a>
+                </li>
+                <li>15. Ссылки из прямоугольных и круглых областей картинки:
+                    <br>
+                    <img src="image.jpg" alt="Карта" usemap="#imagemap" width="200">
+                    <map name="imagemap">
+                        <area shape="rect" coords="0,0,100,100" href="https://example.com/rect"
+                            alt="Прямоугольная область">
+                        <area shape="circle" coords="150,150,50" href="https://example.com/circle"
+                            alt="Круглая область">
+                    </map>
+                </li>
+                <li>16. <a href="">Ссылка с пустым href</a></li>
+                <li>17. <a>Ссылка без href</a></li>
+                <li>18. <a href="https://example.com/" rel="nofollow">Запрещен переход поисковикам</a></li>
+                <li>19. <!--noindex--><a href="https://example.com/">Запрещенная для индексации
+                        поисковиками</a><!--/noindex--></li>
+                <li>20. Нумерованный список ссылок с подписями title:
+                    <ol>
+                        <li><a href="https://example.com/1" title="Первая ссылка">Ссылка один</a></li>
+                        <li><a href="https://example.com/2" title="Вторая ссылка">Ссылка два</a></li>
+                    </ol>
+                </li>
+                <li>21. <a href="ftp://example.com/file.zip">Ссылка на файл на сервере FTP с авторизацией</a></li>
+            </ul>
+        </section>
 
-        <label>7. Биография:<br><textarea name="bio"></textarea></label><br><br>
 
-        <label>8. <input type="checkbox" name="agreement"> С контрактом ознакомлен(а)</label><br><br>
+        <section id="table-section" class="content-block">
+            <h2>Таблица данных</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Категория</th>
+                        <th>Наименование</th>
+                        <th>Количество</th>
+                        <th>Цена (руб.)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td rowspan="2">Комплектующие</td>
+                        <td>Процессор AMD Ryzen 7</td>
+                        <td>2</td>
+                        <td>35 000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Оперативная память DDR5 32GB</td>
+                        <td>4</td>
+                        <td>14 000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Периферия</td>
+                        <td>Механическая клавиатура</td>
+                        <td>1</td>
+                        <td>8 500</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Периферия</td>
+                        <td>Игровая мышь</td>
+                        <td>1</td>
+                        <td>4 500</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td colspan="2">Специальный монтажный комплект кабелей</td>
+                        <td>3</td>
+                        <td>2 000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Сетевые устройства</td>
+                        <td>Wi-Fi роутер Gigabit</td>
+                        <td>1</td>
+                        <td>6 000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3">Итого наименований:</th>
+                        <td colspan="2">12 шт.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
 
-        9. <input type="submit" value="Сохранить">
-    </form>
+        <section id="form-section" class="content-block">
+            <h1 id="form-title">Форма регистрации</h1>
+            <form action="/" method="POST" class="registration-form">
+                <label>1. ФИО: <input type="text" name="fio"></label><br><br>
+
+                <label>2. Телефон: <input type="tel" name="phone"></label><br><br>
+
+                <label>3. E-mail: <input type="email" name="email"></label><br><br>
+
+                <label>4. Дата рождения: <input type="date" name="birthdate"></label><br><br>
+
+                <p>5. Пол:</p>
+                <label><input type="radio" name="gender" value="male"> Мужской</label>
+                <label><input type="radio" name="gender" value="female"> Женский</label><br><br>
+
+                <label>6. Любимый язык программирования (зажмите Ctrl для множественного выбора):<br>
+                    <select name="languages[]" multiple="multiple">
+                        <option value="Pascal">Pascal</option>
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="Haskel">Haskel</option>
+                        <option value="Clojure">Clojure</option>
+                        <option value="Prolog">Prolog</option>
+                        <option value="Scala">Scala</option>
+                    </select>
+                </label><br><br>
+
+                <label>7. Биография:<br><textarea name="bio"></textarea></label><br><br>
+
+                <label>8. <input type="checkbox" name="agreement"> С контрактом ознакомлен(а)</label><br><br>
+
+                9. <input type="submit" value="Сохранить">
+            </form>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>(с) Сергей Синица</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
