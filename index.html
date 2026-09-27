@@ -48,21 +48,33 @@
     </ul>
 
     <h1 id="form-section">Форма регистрации</h1>
-    <form action="/" method="POST">
-        <label>1. ФИО: <input type="text" name="fio"></label><br><br>
+    <form action="#" method="GET">
+        <label>1. ФИО:
+            <input type="text" name="fio" required
+                pattern="^[A-ZА-ЯЁ][a-zа-яё]+(-[A-ZА-ЯЁ][a-zа-яё]+)?(\s+[A-ZА-ЯЁ][a-zа-яё]+(-[A-ZА-ЯЁ][a-zа-яё]+)?){1,2}$"
+                placeholder="Иванов Иван Иванович"
+                title="ФИО должно начинаться с заглавной буквы, содержать только буквы и состоять минимум из фамилии и имени">
+        </label><br><br>
 
-        <label>2. Телефон: <input type="tel" name="phone"></label><br><br>
+        <label>2. Телефон:
+            <input type="tel" name="phone" required pattern="^\+7[\s-]?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$"
+                placeholder="+7 (999) 123-45-67" title="Номер должен начинаться с +7 и содержать 10 цифр номера">
+        </label><br><br>
 
-        <label>3. E-mail: <input type="email" name="email"></label><br><br>
+        <label>3. E-mail:
+            <input type="email" name="email" required placeholder="example@mail.ru">
+        </label><br><br>
 
-        <label>4. Дата рождения: <input type="date" name="birthdate"></label><br><br>
+        <label>4. Дата рождения:
+            <input type="date" name="birthdate" required>
+        </label><br><br>
 
         <p>5. Пол:</p>
-        <label><input type="radio" name="gender" value="male"> Мужской</label>
-        <label><input type="radio" name="gender" value="female"> Женский</label><br><br>
+        <label><input type="radio" name="gender" value="male" required> Мужской</label>
+        <label><input type="radio" name="gender" value="female" required> Женский</label><br><br>
 
         <label>6. Любимый язык программирования (зажмите Ctrl для множественного выбора):<br>
-            <select name="languages[]" multiple="multiple">
+            <select name="languages[]" multiple="multiple" required>
                 <option value="Pascal">Pascal</option>
                 <option value="C">C</option>
                 <option value="C++">C++</option>
@@ -77,11 +89,13 @@
             </select>
         </label><br><br>
 
-        <label>7. Биография:<br><textarea name="bio"></textarea></label><br><br>
+        <label>7. Биография:<br>
+            <textarea name="bio" required placeholder="Расскажите о себе..."></textarea>
+        </label><br><br>
 
-        <label>8. <input type="checkbox" name="agreement"> С контрактом ознакомлен(а)</label><br><br>
+        <label>8. <input type="checkbox" name="agreement" required> С контрактом ознакомлен(а)</label><br><br>
 
-        9. <input type="submit" value="Сохранить">
+        <input type="submit" value="Сохранить">
     </form>
 </body>
 
