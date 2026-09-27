@@ -57,8 +57,9 @@
         </label><br><br>
 
         <label>2. Телефон:
-            <input type="tel" name="phone" required pattern="^\+7[\s-]?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$"
-                placeholder="+7 (999) 123-45-67" title="Номер должен начинаться с +7 и содержать 10 цифр номера">
+            <input type="tel" name="phone" required pattern="\+7[0-9]{10}" placeholder="+79991234567"
+                title="Формат: +7 и 10 цифр номера (например: +79991234567)">
+
         </label><br><br>
 
         <label>3. E-mail:
@@ -66,7 +67,7 @@
         </label><br><br>
 
         <label>4. Дата рождения:
-            <input type="date" name="birthdate" required>
+            <input type="date" name="birthdate" required min="1926-01-01" max="2026-09-27">
         </label><br><br>
 
         <p>5. Пол:</p>
