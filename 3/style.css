@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f7f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+}
+
+
+.site-header {
+    width: 100%;
+    background-color: #6fa8dc;
+    border-bottom: 2px solid #4a86c6;
+}
+
+.header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px 0 12px 0;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+.site-nav {
+    width: 100%;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.site-nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #4a86c6;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.site-nav a:hover {
+    background-color: #2b6cb0;
+}
+
+.main-content {
+    width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+}
+
+.content-block {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.order-table {
+    order: 1;
+}
+
+.order-links {
+    order: 2;
+}
+
+.order-form {
+    order: 3;
+}
+
+.content-block h1,
+.content-block h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 18px;
+    border-bottom: 2px solid #6fa8dc;
+    padding-bottom: 6px;
+}
+
+.content-block ul,
+.content-block ol {
+    padding-left: 20px;
+}
+
+.content-block li {
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+.content-block a {
+    color: #2b6cb0;
+    text-decoration: none;
+}
+
+.content-block a:hover {
+    text-decoration: underline;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #b0c4de;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.data-table thead th {
+    background-color: #4a86c6;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #eaf2fa;
+}
+
+.data-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.data-table tbody tr:hover {
+    background-color: #dbe9f6;
+}
+
+.data-table tfoot th,
+.data-table tfoot td {
+    background-color: #d4e3f3;
+    font-weight: bold;
+}
+
+
+.registration-form label {
+    display: block;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="tel"],
+.registration-form input[type="email"],
+.registration-form input[type="date"],
+.registration-form textarea,
+.registration-form select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.registration-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.registration-form select {
+    height: auto;
+}
+
+.radio-group {
+    margin-top: 5px;
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.registration-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #4a86c6;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.registration-form input[type="submit"]:hover {
+    background-color: #2b6cb0;
+}
+
+.site-footer {
+    width: 100%;
+    background-color: #6fa8dc;
+    border-top: 2px solid #4a86c6;
+    padding: 15px 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .header-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .header-brand {
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .site-title {
+        font-size: 22px;
+    }
+
+
+    .site-nav {
+        width: auto;
+    }
+
+    .site-nav ul {
+        flex-direction: row;
+        width: auto;
+        gap: 10px;
+    }
+
+    .site-nav a {
+        display: inline-block;
+        width: auto;
+        padding: 8px 14px;
+    }
+
+
+    .main-content {
+        padding: 30px 15px;
+    }
+
+    .order-links {
+        order: 1;
+    }
+
+    .order-table {
+        order: 2;
+    }
+
+    .order-form {
+        order: 3;
+    }
+
+    .content-block {
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .content-block h1,
+    .content-block h2 {
+        font-size: 20px;
+    }
+
+    .data-table {
+        font-size: 14px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 10px 12px;
+    }
+
+    .registration-form input[type="text"],
+    .registration-form input[type="tel"],
+    .registration-form input[type="email"],
+    .registration-form input[type="date"],
+    .registration-form textarea,
+    .registration-form select {
+        max-width: 450px;
+    }
+
+    .registration-form input[type="submit"] {
+        display: inline-block;
+        width: auto;
+        padding: 8px 22px;
+        font-size: 14px;
+    }
+
+    .site-footer {
+        padding: 20px 0;
+    }
+}
