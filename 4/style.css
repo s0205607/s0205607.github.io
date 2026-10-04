@@ -1,0 +1,78 @@
+﻿.site-header {
+  background-color: #6fa8dc;
+  border-bottom: 2px solid #4a86c6;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+}
+
+.site-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.site-nav .nav-link {
+  color: #ffffff;
+  font-weight: 600;
+  background-color: #4a86c6;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+  background-color: #2b6cb0;
+  color: #ffffff;
+}
+
+.section-heading {
+  color: #2c3e50;
+  border-bottom: 2px solid #6fa8dc;
+}
+
+.links-list a {
+  color: #2b6cb0;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.links-list a:hover {
+  text-decoration: underline;
+}
+
+.data-table thead th {
+  background-color: #4a86c6;
+  color: #ffffff;
+  border-color: #3b76b6;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #eaf2fa;
+}
+
+.data-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.data-table tbody tr:hover {
+  background-color: #dbe9f6;
+}
+
+.data-table tfoot th,
+.data-table tfoot td {
+  background-color: #d4e3f3;
+  font-weight: bold;
+}
+
+.site-footer {
+  background-color: #6fa8dc;
+  border-top: 2px solid #4a86c6;
+}
