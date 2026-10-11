@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5 - Калькулятор стоимости заказа</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="calculator.js" defer></script>
+</head>
+
+<body>
+
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="header-brand">
+                <img src="image.jpg" alt="Логотип сайта" class="logo">
+                <span class="site-title">KOVALEV SITE</span>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">Калькулятор</a></li>
+                    <li><a href="../4/">Задание 4</a></li>
+                    <li><a href="../3/">Задание 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container main-content">
+        <section class="calculator-card">
+            <h1>Калькулятор стоимости заказа</h1>
+            <p class="description">Выберите товар из списка, укажите необходимое количество и нажмите кнопку для расчёта
+                стоимости.</p>
+
+            <form id="order-form" class="calc-form">
+                <div class="form-group">
+                    <label for="product">Выберите товар:</label>
+                    <select id="product" name="product">
+                        <option value="35000">Процессор AMD Ryzen 7 — 35 000 руб.</option>
+                        <option value="14000">Оперативная память DDR5 32GB — 14 000 руб.</option>
+                        <option value="8500">Механическая клавиатура — 8 500 руб.</option>
+                        <option value="4500">Игровая мышь — 4 500 руб.</option>
+                        <option value="6000">Wi-Fi роутер Gigabit — 6 000 руб.</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Количество товара:</label>
+                    <input type="text" id="quantity" name="quantity" placeholder="Например: 3">
+                </div>
+
+                <div class="form-group">
+                    <button type="button" id="calc-btn" class="calc-button">Рассчитать стоимость</button>
+                </div>
+
+
+                <div id="result" class="result-box" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>(c) Ковалев Иван</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
