@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 6 - Калькулятор стоимости услуги</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключение скрипта калькулятора с помощью defer в head -->
+    <script src="calculator.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="header-brand">
+                <img src="image.jpg" alt="Логотип сайта" class="logo">
+                <span class="site-title">KOVALEV SITE</span>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">Задание 6</a></li>
+                    <li><a href="../5/">Задание 5</a></li>
+                    <li><a href="../4/">Задание 4</a></li>
+                    <li><a href="../3/">Задание 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент: калькулятор стоимости услуги -->
+    <main class="container main-content">
+        <section class="calculator-card">
+            <h1>Калькулятор стоимости услуги</h1>
+            <p class="description">Выберите тип услуги, необходимые опции и укажите количество. Стоимость
+                пересчитывается автоматически без перезагрузки страницы.</p>
+
+            <form id="service-form" class="calc-form">
+
+                <!-- 1. Поле для ввода количества -->
+                <div class="form-group">
+                    <label for="quantity">Количество услуг:</label>
+                    <input type="text" id="quantity" name="quantity" value="1"
+                        placeholder="Введите целое число (например, 2)">
+                </div>
+
+                <!-- 2. Выбор типа услуги радиокнопками (не менее 3-х вариантов) -->
+                <div class="form-group">
+                    <span class="group-label">Тип услуги:</span>
+                    <div class="radios-group">
+                        <label class="radio-label">
+                            <input type="radio" name="service-type" value="type1" checked>
+                            <span>Базовый аудит сайта (1 000 руб.)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="service-type" value="type2">
+                            <span>Разработка веб-страницы (3 000 руб.)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="service-type" value="type3">
+                            <span>Комплексное обслуживание (5 000 руб.)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 3. Выбор опции товара из списка (отображается только для 2-го типа) -->
+                <div class="form-group" id="options-container" style="display: none;">
+                    <label for="service-option">Дополнительная опция дизайна:</label>
+                    <select id="service-option" name="service-option">
+                        <option value="0">Стандартный шаблон (+0 руб.)</option>
+                        <option value="1500">Индивидуальный дизайн (+1 500 руб.)</option>
+                        <option value="3000">Премиум-дизайн с анимациями (+3 000 руб.)</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group" id="property-container" style="display: none;">
+                    <span class="group-label">Дополнительное свойство:</span>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="service-property" name="service-property" value="2000">
+                        <span>Срочное выполнение в течение 24 часов (+2 000 руб.)</span>
+                    </label>
+                </div>
+
+
+                <div id="result" class="result-box show success" aria-live="polite">
+                    Итоговая стоимость: 1 000 руб.
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>(c) Ковалев Иван</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
