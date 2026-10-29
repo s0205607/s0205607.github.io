@@ -4,8 +4,7 @@
     padding: 0;
 }
 
-html,
-body {
+html, body {
     width: 100%;
     overflow-x: hidden;
 }
@@ -219,9 +218,19 @@ body {
     text-align: center;
 }
 
+/* Полное выключение дефолтных маркеров slick-theme */
+.slick-dots li button:before,
+.slick-dots li button::before,
+.slick-dots li button:after,
+.slick-dots li button::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Аккуратные точки как у друга */
 .slick-dots {
     position: static;
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
     padding: 0;
     list-style: none;
     display: flex !important;
@@ -236,45 +245,34 @@ body {
     padding: 0;
     width: auto;
     height: auto;
-    display: inline-block;
+    display: inline-flex;
 }
 
 .slick-dots li button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    padding: 6px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 0;
-    line-height: 0;
-    color: transparent;
-    border-radius: 50%;
-    outline: none;
+    display: block !important;
+    width: 14px !important;
+    height: 14px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 2px solid #1e5ba8 !important;
+    border-radius: 50% !important;
+    background-color: #ffffff !important;
+    cursor: pointer !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease !important;
 }
 
-.slick-dots li button::after {
-    content: "";
-    display: block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid #1e5ba8;
-    background-color: #ffffff;
-    transition: all 0.2s ease;
-    box-sizing: border-box;
+.slick-dots li button:hover {
+    background-color: #dbeafe !important;
 }
 
-.slick-dots li:hover button::after {
-    background-color: #dbeafe;
-}
-
-.slick-dots li.slick-active button::after {
-    background-color: #1e5ba8;
-    transform: scale(1.15);
+.slick-dots li.slick-active button {
+    background-color: #1e5ba8 !important;
+    border-color: #1e5ba8 !important;
 }
 
 .pager-text {

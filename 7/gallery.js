@@ -8,18 +8,18 @@ $(document).ready(function () {
     const $pager = $("#pager-text");
 
     function updatePager(slick, currentSlide) {
+        if (!slick) {
+            return;
+        }
+
         let totalPages = 8;
         let currentPage = 1;
 
-        if (slick && slick.$dots) {
-            totalPages = slick.$dots.find("li").length;
+        if (slick.$dots && slick.$dots.length) {
+            totalPages = slick.$dots.find("li").length || 8;
             const activeIndex = slick.$dots.find("li.slick-active").index();
-            if (activeIndex >= 0) {
-                currentPage = activeIndex + 1;
-            } else {
-                currentPage = (currentSlide || 0) + 1;
-            }
-        } else if (slick) {
+            currentPage = (activeIndex >= 0) ? activeIndex + 1 : (currentSlide || 0) + 1;
+        } else {
             totalPages = slick.slideCount || 8;
             currentPage = (currentSlide || 0) + 1;
         }
@@ -48,19 +48,19 @@ $(document).ready(function () {
         arrows: true,
         dots: true,
         infinite: false,
-        nextArrow: '<button type="button" class="slick-next" aria-label="Следующий слайд">›</button>',
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-prev" aria-label="Предыдущий слайд">‹</button>',
+        nextArrow: '<button type="button" class="slick-next" aria-label="Следующий слайд">›</button>',
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToScroll: 1,
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             }
-        ],
-        slidesToScroll: 1,
-        slidesToShow: 3,
-        speed: 300
+        ]
     });
 });
