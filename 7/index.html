@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 7 - Адаптивная галерея-слайдер</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="gallery.js" defer></script>
+</head>
+
+<body>
+
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="header-brand">
+                <img src="image.jpg" alt="Логотип сайта" class="logo">
+                <span class="site-title">KOVALEV SITE</span>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">Задание 7</a></li>
+                    <li><a href="../6/">Задание 6</a></li>
+                    <li><a href="../5/">Задание 5</a></li>
+                    <li><a href="../4/">Задание 4</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container main-content">
+        <section class="gallery-card">
+            <h1>Галерея изображений</h1>
+            <p class="description">Горизонтальный адаптивный слайдер из 8 изображений. На компьютере отображаются 3
+                изображения, на смартфонах — 1.</p>
+
+
+            <div class="slider-wrapper">
+                <div class="gallery-slider">
+                    <div class="slide-item">
+                        <img src="images/img1.jpg" alt="Изображение 1">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/img2.jpg" alt="Изображение 2">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/img3.jpg" alt="Изображение 3">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/img4.jpg" alt="Изображение 4">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/img5.jpg" alt="Изображение 5">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/img6.jpg" alt="Изображение 6">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/img7.jpg" alt="Изображение 7">
+                    </div>
+                    <div class="slide-item">
+                        <img src="images/img8.jpg" alt="Изображение 8">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="pager-container">
+                <div id="pager-text" class="pager-text">Страница 1 из 6</div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>(с) Ковалев Иван</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
