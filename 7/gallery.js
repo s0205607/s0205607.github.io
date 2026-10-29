@@ -1,3 +1,5 @@
+﻿/*jslint browser */
+/*global $, jQuery */
 
 $(document).ready(function () {
     "use strict";
@@ -5,26 +7,29 @@ $(document).ready(function () {
     const $slider = $(".gallery-slider");
     const $pager = $("#pager-text");
 
-
     function updatePager(slick, currentSlide) {
-        const slideIndex = currentSlide || 0;
-        let totalPages = 1;
+        let totalPages = 8;
         let currentPage = 1;
 
-        if (slick.$dots) {
+        if (slick && slick.$dots) {
             totalPages = slick.$dots.find("li").length;
-            currentPage = slick.$dots.find("li.slick-active").index() + 1;
-            if (currentPage < 1) {
-                currentPage = 1;
+            const activeIndex = slick.$dots.find("li.slick-active").index();
+            if (activeIndex >= 0) {
+                currentPage = activeIndex + 1;
+            } else {
+                currentPage = (currentSlide || 0) + 1;
             }
-        } else {
-            totalPages = slick.slideCount;
-            currentPage = slideIndex + 1;
+        } else if (slick) {
+            totalPages = slick.slideCount || 8;
+            currentPage = (currentSlide || 0) + 1;
+        }
+
+        if (currentPage > totalPages) {
+            currentPage = totalPages;
         }
 
         $pager.text("Страница " + currentPage + " из " + totalPages);
     }
-
 
     $slider.on("init", function (event, slick) {
         updatePager(slick, 0);
@@ -34,21 +39,18 @@ $(document).ready(function () {
         updatePager(slick, currentSlide);
     });
 
+    $slider.on("breakpoint", function (event, slick) {
+        updatePager(slick, slick.currentSlide || 0);
+    });
 
     $slider.slick({
         adaptiveHeight: true,
+        arrows: true,
         dots: true,
         infinite: false,
         nextArrow: '<button type="button" class="slick-next" aria-label="Следующий слайд">›</button>',
         prevArrow: '<button type="button" class="slick-prev" aria-label="Предыдущий слайд">‹</button>',
         responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToScroll: 1,
-                    slidesToShow: 2
-                }
-            },
             {
                 breakpoint: 768,
                 settings: {
