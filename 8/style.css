@@ -241,6 +241,12 @@ body {
     box-shadow: 0 0 0 2px rgba(30, 91, 168, 0.15);
 }
 
+.form-group input.input-error,
+.form-group textarea.input-error {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
 .form-group textarea {
     resize: vertical;
     min-height: 70px;

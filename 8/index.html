@@ -1,12 +1,14 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 8 - Форма обратной связи</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="feedback.js" defer></script>
+    <link rel="stylesheet" href="style.css?v=2">
+    <script src="feedback.js?v=2" defer></script>
 </head>
+
 <body>
 
     <header class="site-header">
@@ -30,9 +32,9 @@
         <section class="intro-card">
             <h1>Обратная связь</h1>
             <p class="description">
-                Нажмите на кнопку ниже, чтобы открыть контактную форму.
+                Нажмите на кнопку ниже, чтобы открыть форму.
                 Введённые данные автоматически сохраняются в браузере,
-                а при открытии формы обновляется адрес страницы (History API).
+                а при открытии формы обновляется адрес страницы.
             </p>
             <button type="button" id="open-modal-btn" class="primary-btn">
                 Открыть форму обратной связи
@@ -46,79 +48,40 @@
         </div>
     </footer>
 
-    <div
-        id="feedback-modal"
-        class="modal-overlay"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modal-title"
-        aria-hidden="true"
-    >
+    <div id="feedback-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+        aria-hidden="true">
         <div class="modal-window">
             <div class="modal-header">
                 <h2 id="modal-title">Связаться с нами</h2>
-                <button
-                    type="button"
-                    id="close-modal-btn"
-                    class="close-btn"
-                    aria-label="Закрыть окно"
-                >&times;</button>
+                <button type="button" id="close-modal-btn" class="close-btn" aria-label="Закрыть окно">&times;</button>
             </div>
 
-            <form id="feedback-form" class="feedback-form">
+            <form id="feedback-form" class="feedback-form" novalidate>
                 <div class="form-group">
                     <label for="fullname">ФИО *</label>
-                    <input
-                        type="text"
-                        id="fullname"
-                        name="fullname"
-                        placeholder="Иванов Иван Иванович"
-                        required
-                    >
+                    <input type="text" id="fullname" name="fullname" placeholder="Иванов Иван Иванович" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="example@mail.ru"
-                            required
-                        >
+                        <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Телефон *</label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="+7 (999) 123-45-67"
-                            required
-                        >
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="organization">Организация</label>
-                    <input
-                        type="text"
-                        id="organization"
-                        name="organization"
-                        placeholder="КубГУ"
-                    >
+                    <label for="organization">Организация *</label>
+                    <input type="text" id="organization" name="organization" placeholder="КубГУ" required>
                 </div>
 
                 <div class="form-group">
                     <label for="message">Сообщение *</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="3"
-                        placeholder="Введите ваше сообщение..."
-                        required
-                    ></textarea>
+                    <textarea id="message" name="message" rows="3" placeholder="Введите ваше сообщение..."
+                        required></textarea>
                 </div>
 
                 <div class="form-group checkbox-group">
@@ -128,11 +91,7 @@
                     </label>
                 </div>
 
-                <div
-                    id="form-status"
-                    class="form-status"
-                    aria-live="polite"
-                ></div>
+                <div id="form-status" class="form-status" aria-live="polite"></div>
 
                 <button type="submit" id="submit-btn" class="submit-btn">
                     Отправить
@@ -142,4 +101,5 @@
     </div>
 
 </body>
+
 </html>
